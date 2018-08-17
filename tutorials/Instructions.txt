@@ -1,7 +1,0 @@
-1) Install django==1.11 djangorestframework
-2) python manage.py runserver
-
-Note: Install sudo apt-get install httpie
-
-3) curl -H 'Accept: application/json; indent=4' -u admin:admin@123 http://127.0.0.1:8000/users/
-4) http -a admin:admin@123 http://127.0.0.1:8000/users/
