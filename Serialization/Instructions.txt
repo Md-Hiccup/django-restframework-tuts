@@ -9,3 +9,23 @@ Note: Install httpie:   sudo apt-get install httpie
 urls:
     http://localhost:8000/snippets/             //  ['GET', 'POST']
     https://localhost:8000/snippets/1/          //  ['GET', 'PUT', 'DELETE']
+
+Format of Response that we get back 
+    by using 'Accept'
+        http http://127.0.0.1:8000/snippets/ Accept:application/json  # Request JSON
+        http http://127.0.0.1:8000/snippets/ Accept:text/html         # Request HTML
+
+    or by using Format suffix
+        http http://127.0.0.1:8000/snippets.json  # JSON suffix
+        http http://127.0.0.1:8000/snippets.api   # Browsable API suffix
+
+POST Request using Content-Type
+    # POST using form data
+    http --form POST http://127.0.0.1:8000/snippets/ code="print 123"
+
+    # POST using JSON
+    http --json POST http://127.0.0.1:8000/snippets/ code="print 456"
+
+
+NOTE: If you add a --debug switch to the http requests above, you will be able to see the request type in request headers.
+
