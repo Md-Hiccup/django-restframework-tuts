@@ -1,0 +1,11 @@
+1) Install django==1.11 djangorestframework pygments
+2) python manage.py runserver
+
+Note: Install httpie:   sudo apt-get install httpie
+
+3) curl -H 'Accept: application/json; indent=4' -u admin:admin@123 http://127.0.0.1:8000/snippets/
+4) http -a admin:admin@123 http://127.0.0.1:8000/snippets/
+
+urls:
+    http://localhost:8000/snippets/             //  ['GET', 'POST']
+    https://localhost:8000/snippets/1/          //  ['GET', 'PUT', 'DELETE']

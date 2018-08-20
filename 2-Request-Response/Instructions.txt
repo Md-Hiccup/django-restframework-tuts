@@ -10,6 +10,10 @@ urls:
     http://localhost:8000/snippets/             //  ['GET', 'POST']
     https://localhost:8000/snippets/1/          //  ['GET', 'PUT', 'DELETE']
 
+
+
+Request and Response
+
 Format of Response that we get back 
     by using 'Accept'
         http http://127.0.0.1:8000/snippets/ Accept:application/json  # Request JSON
