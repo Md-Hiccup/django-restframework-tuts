@@ -33,3 +33,20 @@ POST Request using Content-Type
 
 NOTE: If you add a --debug switch to the http requests above, you will be able to see the request type in request headers.
 
+
+
+Class Based Views
+
+1) using mixins
+    The base class provides the core functionality and mixins classess provides some functions like 
+        -   ListModelMixin      =   .list()
+        -   CreateModelMixin    =   .create()
+        -   RetrieveModelMixin  =   .retrieve()
+        -   UpdateModelMixin    =   .update()
+        -   DestroyModelMixin   =   .destroy()
+
+2) using Generic class based views
+    import the generic from rest_framework
+    For Create and listing  =   include base class 'generics.ListCreateAPIView'
+    For Retrive,Update and Destroy  =   include base class 'generics.RetrieveUpdateDestroyAPIView'
+    
