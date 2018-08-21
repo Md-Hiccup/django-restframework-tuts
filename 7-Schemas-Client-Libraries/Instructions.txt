@@ -99,8 +99,33 @@ F)  ViewSets & Routers
     -   REST framework includes an abstraction for dealing with ViewSets
     -   ViewSet classes are almost the same thing as View classes, except that they provide operations such as read, or update, and not method handlers such as get or put.
     -    @action decorator to create a custom action, This decorator can be used to add any custom endpoints that don't fit into the standard create/update/delete style. by Default it is 'GET'
-    -   
-
-1)  using Routers
+      
+    
+1)  using Router   
     -   Registering the viewsets with the router is similar to providing a urlpattern. We include two arguments - the URL prefix for the views, and the viewset itself.
     -   The DefaultRouter class we're using also automatically creates the API root view for us, so we can now delete the api_root method from our views module.
+
+
+G)  Schemas & Client Libraries
+
+url:    http://localhost:8000/schema/
+
+    -   A schema is a machine-readable document that describes the available API endpoints, their URLS, and what operations they support.
+
+    -   Schemas can be a useful tool for auto-generated documentation, and can also be used to drive dynamic client libraries that can interact with the API.
+
+1) coreapi
+    -   $ pip install coreapi coreapi-cli
+    -   $ coreapi get http://127.0.0.1:8000/schema/
+    -   It GET the existing snippets
+        -   $ coreapi action snippets list
+    -   To Get back the highlight HTML for a PARTUCULAR SNIPPET we need to provide an id.
+        -   $ coreapi action snippets highlight --param id=1    
+    -   Authenticating our client with <username>:<password>
+        -   $ coreapi credentials add 127.0.0.1 <username>:<password> --auth basic
+    -   To Reload
+        -   $ coreapi reload
+    -   To CREATE a new snippet 
+        -   $ coreapi action snippets create --param title="Example" --param code="print('hello, world')"
+    -   To DELETE
+        -   $ coreapi action snippets delete --param id=7
