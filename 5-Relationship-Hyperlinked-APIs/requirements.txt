@@ -1,4 +1,4 @@
-Django==1.11.23
+Django==3.0.2
 djangorestframework==3.9.1
 Pygments==2.2.0
 pytz==2018.5
