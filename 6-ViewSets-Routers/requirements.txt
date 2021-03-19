@@ -1,4 +1,4 @@
 Django==1.11.23
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 Pygments==2.2.0
 pytz==2018.5
